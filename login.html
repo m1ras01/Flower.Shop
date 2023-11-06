@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Flower Shop Astana</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/android-chrome-512x512.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Login Page</title>
+    <script src="flowers.js"></script>
+    
+</head>
+<header>
+  
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="#" class="logo">flowers<span>.</span></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="review.html">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="location.html">Location</a>
+                </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="login.html" class="fas fa-user"></a>
+    </div>
+
+</header>
+<body>
+    <style>
+    body {
+      size: 7cap;
+      font-family: 'Arial', sans-serif;
+      background-color: #fdd2e5; /* Light pink background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 200vh;
+      margin: 0;
+    }
+
+  
+
+    .section {
+      background-color: #fff;
+      border: 1px solid #f698b6; /* Border color related to flowers */
+      border-radius: 8px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .section:hover {
+      background-color: #fbd7e1; /* Light pink on hover */
+    }
+
+    .section-header {
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #e44d82; /* Pinkish color */
+      position: relative;
+    }
+
+    .section-content {
+      padding: 10px;
+      background-color: #fde8f0; /* Light pink content background */
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .section.active .section-header::after {
+      content: '\25b2'; /* Unicode character for an up arrow */
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
+
+.login-container {
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 240px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+    </style>
+
+
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input style="background-color: pink;" type="email" id="email" name="email" required>
+            <span id="emailError" class="error"></span>
+
+            <label for="password">Password:</label>
+            <input style="background-color: pink;" type="password" id="password" required>
+            <button type="login" class="btn btn-danger" onclick="authenticate()">Login</button>
+            
+            <p id="errorMessage"></p>
+        </form>
+
+        <a href="regestration.html" class="btn btn-success" type="login">Registration</a>
+        
+        <br>
+        <hr>
+        <br>
+        <br>
+        <h2>For Admin</h2>
+        <label for="password">ID:</label>
+            <input style="background-color: pink;" type="id" id="id" required>
+        <a class="btn btn-success" type="login" onclick="admin()">Admin</a>
+
+        
+       
+
+
+    
+</body>
+
+</html>

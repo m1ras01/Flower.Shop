@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Flower Shop Astana</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/android-chrome-512x512.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <header>
+  
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a href="#" class="logo">flowers<span>.</span></a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="review.html">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location.html">Location</a>
+                    </li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+            <a href="login.html" class="fas fa-user"></a>
+        </div>
+
+    </header>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
+
+
+            <!--SECTION CONTACT-->
+            <section class="contact" id="contact">
+        
+                <h1 class="heading"> <span> contact </span> us </h1>
+        
+                <div class="row">
+                    <form action="">
+                        <input type="text" placeholder="name" class="box">
+                        <input type="email" placeholder="email" class="box">
+                        <input type="number" placeholder="number" class="box">
+                        <textarea name="" placeholder="message" class="box" id="" cols="30" rows="30"></textarea>
+                        <input type="submit" value="send message" class="btn" style="background-color: #333;">
+                        
+                    </form>
+        
+                    <div class="image">
+                        <img src="https://img.freepik.com/free-vector/blooming-concept-illustration_114360-4245.jpg?w=740&t=st=1694994394~exp=1694994994~hmac=e8614c3077cbe6a120e74e08393d11dfd5a32a849fdb7509c80117a027f5f585" alt="">
+                    </div>
+        
+                </div>
+
+                <div style="text-align: center;">
+                    <h1>Result</h1>
+                    <button>Trigger Enter Keypress</button>
+                </div>
+        
+            </section>
+        
+        
+
+
+                   <!--SECTION FOOTER-->
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+
+                <h3>quick lins</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#review">Review</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+            <div class="box">
+
+                <h3>extra lins</h3>
+                <a href="#">my account</a>
+                <a href="#">my order</a>
+                <a href="#">my favorite</a>
+                               
+            </div>
+
+            <div class="box">
+
+                <h3>locations</h3>
+                <a href="#">Kazakhstan</a>
+                <a href="#">USA</a>
+                <a href="#">Japan</a>
+                <a href="#">France</a>
+                <a href="#">Turkey</a>
+                
+            </div>
+
+            <div class="box">
+
+                <h3>contact info</h3>
+                <a href="#">+7 707 855 7005</a>
+                <a href="#">221930@astanait.edu.kz</a>
+                <a href="#">Astana, Kazakhstan</a>
+                <img src="https://i.pinimg.com/originals/c2/6a/71/c26a71a5f607ba25f711891dce4b1204.jpg" alt="">
+                
+            </div>
+            
+        </div>
+        <div class="created"> created by <span>Mr. Miras</span></div>
+    </section>
+
+    <script>
+        let btn = document.querySelector("button");
+let result = document.querySelector("h1");
+
+document.body.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    result.innerText = "Enter Key Pressed";
+  }
+
+  if (e.key == "Enter" && e.shiftKey) {
+    result.innerText = "Enter + Shift Key Pressed";
+  }
+});
+
+btn.addEventListener("click", () => {
+  
+  //Trigger Eneter key Press
+  const keyEvent = new KeyboardEvent("keydown", { key: "Enter"});
+  
+  //Trigger Eneter + Shift key Press
+  // const keyEvent = new KeyboardEvent("keydown", { key: "Enter", shiftKey: true });
+
+  document.body.dispatchEvent(keyEvent);
+});
+        </script>
+</body>
+</html>

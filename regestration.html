@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Flower Shop Astana</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/android-chrome-512x512.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+  
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a href="#" class="logo">flowers<span>.</span></a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="review.html">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location.html">Location</a>
+                    </li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+            <a href="login.html" class="fas fa-user"></a>
+        </div>
+
+    </header>
+
+
+    <style>
+        
+        body{
+            background-color: pink;
+            top: 90px;
+            position: relative;
+            left: 45%;
+        }
+
+    </style>
+
+    <div class="regestration">
+    <h1>Regestration</h1>    
+    <br>
+    <p>Input your name:</p>
+    <input id="name">
+
+    <p>Input your login:</p>
+    <input id="login">
+
+    <p>Input your number:</p>
+    <input id="number">
+
+    <p>Input your new password:</p>
+    <input id="password">
+
+    <button type="submit" id="submit">Registration</button>
+    </div>
+    <script>
+        let name = document.querySelector('#name');
+        let login = document.querySelector('#login');
+        let number = document.querySelector('#number');
+        let password = document.querySelector('#password');
+
+        let users = {};
+
+        function User(name,login,number,password){
+            this.name = name;
+            this.login = login;
+            this.number = number;
+            this.password = password;
+        }
+
+        function createId(users){
+            return Object.keys(users).length;
+        }
+
+        submit.addEventListener('click' ,() =>{
+            const nameUser = name.value;
+            const loginUser = login.value;
+            const numberUser = number.value;
+            const passwordUser = password.value;
+
+            const user = new User(nameUser,loginUser,numberUser,passwordUser);
+            const userId = 'User'+createId(users);
+            users[userId] = user;
+            console.log(users);
+            alert(nameUser+' вы успешно прошли регестрацию!!!')
+        })
+
+        const div = document.getElementById('submit');
+
+        div.addEventListener('mouseover', function() {
+       div.style.backgroundColor = 'red';
+}); 
+
+        div.addEventListener('mouseout', function() {
+        div.style.backgroundColor = 'blue';
+});
+
+
+        
+        
+
+
+    </script>
+</body>
+</html>

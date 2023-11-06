@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="images/android-chrome-512x512.png">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fdd2e5; /* Light pink background */
+      margin: 0;
+      padding: 0;
+    }
+
+   
+
+    .logo {
+      color: #e44d82; /* Pinkish color */
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar {
+      background-color: #fdd2e5; /* Light pink background for the navbar */
+    }
+
+    .navbar-nav .nav-link {
+      color: #333;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #333;
+    }
+
+    .icons {
+      display: flex;
+      gap: 10px;
+      color: #333;
+    }
+
+    .icons a {
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .icons a:hover {
+      color: #e44d82; /* Pinkish color on hover */
+    }
+
+    .hr-style {
+      border: 0.5px solid #e44d82; /* Pinkish color for the HR */
+      margin: 15px 0;
+    }
+
+    .tabs {
+      display: flex;
+      cursor: pointer;
+      background-color: #fff; /* White background for the tabs */
+      padding: 10px;
+    }
+
+    .tab {
+      padding: 10px 15px;
+      margin: 0 5px;
+      border: 1px solid #e44d82; /* Pinkish color for the tab border */
+      border-radius: 5px 5px 0 0;
+      background-color: #f1f1f1;
+      transition: background-color 0.3s ease;
+      color: #333;
+    }
+
+    .tab:hover {
+      background-color: #e84393;
+      color: #fff;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 15px;
+      border: 1px solid #e44d82; /* Pinkish color for the content border */
+      border-radius: 0 0 5px 5px;
+      animation: fadeIn 0.5s ease;
+      background-color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" class="logo">flowers<span>.</span></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="location.html">Location</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="icons">
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-shopping-cart"></a>
+    <a href="login.html" class="fas fa-user"></a>
+  </div>
+</header>
+
+
+<hr>
+<hr>
+<br>
+
+<hr class="hr-style">
+
+<div class="tabs">
+  <div class="tab" onclick="openTab('tab1')">Cart 1</div>
+  <div class="tab" onclick="openTab('tab2')">Cart 2</div>
+  <div class="tab" onclick="openTab('tab3')">Cart 3</div>
+</div>
+
+<div id="tab1" class="tab-content">
+  <h2>Your first cart</h2>
+  <p>Empty...</p>
+</div>
+
+<div id="tab2" class="tab-content">
+  <h2>Your second cart</h2>
+  <p>Empty...</p>
+</div>
+
+<div id="tab3" class="tab-content">
+  <h2>Your third card</h2>
+  <p>Empty...</p>
+</div>
+
+
+
+
+<script>
+  function openTab(tabName) {
+    var tabContents = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabContents.length; i++) {
+      tabContents[i].style.display = "none";
+    }
+    document.getElementById(tabName).style.display = "block";
+  }
+</script>
+
+</body>
+</html>
